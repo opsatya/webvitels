@@ -39,10 +39,10 @@ const SectionWrapper = styled.section`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 3rem 6rem;
+  padding: 3rem 5rem;
   @media (min-width: 1024px) {
     flex-direction: row;
-    padding: 3rem 10rem;
+    padding: 3rem 5rem;
   }
 `;
 
@@ -112,11 +112,11 @@ const Section1 = () => {
       </TextWrapper>
       <StatsWrapper>
         <StatsItem>
-          <h1>260</h1>
+          <h1>120</h1>
           <p>PROJECTS COMPLETED</p>
         </StatsItem>
         <StatsItem>
-          <h1>4 +</h1>
+          <h1>1 +</h1>
           <p>YEARS EXPERIENCE</p>
         </StatsItem>
       </StatsWrapper>

@@ -7,16 +7,15 @@ import { motion } from 'framer-motion'
 const HomeSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 5rem;
   padding: 4rem 1rem 4rem 0;
   max-width: 1200px;
-  margin-left: 165px;
   overflow: hidden;
-
+  margin-left:18.6rem;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
-    margin-left:90px;
+    margin-left:2rem;
   }
 `
 
@@ -31,17 +30,20 @@ const Title = styled(motion.h1)`
   font-weight: bold;
   margin-bottom: 1rem;
   color: #333;
+  text-align: center;
 `
 
 const Subtitle = styled(motion.p)`
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   color: #666;
   margin-bottom: 2rem;
+  text-align: center; 
 `
 
 const StatsContainer = styled.div`
   display: flex;
   gap: 2rem;
+  justify-content: center;
   margin-bottom: 2rem;
 
   @media (max-width: 480px) {
@@ -55,13 +57,13 @@ const Stat = styled(motion.div)`
 `
 
 const StatNumber = styled.div`
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: clamp(2.5rem, 5vw, 3rem);
   font-weight: bold;
   color: #4a90e2;
 `
 
 const StatLabel = styled.div`
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #666;
 `
 
@@ -70,6 +72,9 @@ const ImageContainer = styled(motion.div)`
   height: 400px;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center-aligning image content */
+  align-items: center;
 
   @media (max-width: 768px) {
     height: 300px;
@@ -82,7 +87,7 @@ const StyledImage = styled.img`
   object-fit: cover;
 `
 
-export default function Component() {
+   const Section3= ()=> {
   return (
     <HomeSection>
       <ContentArea>
@@ -106,7 +111,7 @@ export default function Component() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <StatNumber>10+</StatNumber>
+            <StatNumber>1+</StatNumber>
             <StatLabel>Years Experience</StatLabel>
           </Stat>
           <Stat
@@ -114,7 +119,7 @@ export default function Component() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <StatNumber>500+</StatNumber>
+            <StatNumber>100+</StatNumber>
             <StatLabel>Happy Customers</StatLabel>
           </Stat>
         </StatsContainer>
@@ -158,3 +163,4 @@ export default function Component() {
     </HomeSection>
   )
 }
+export default Section3

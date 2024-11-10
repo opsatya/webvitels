@@ -3,12 +3,12 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 
 const GlobalStyle = createGlobalStyle`
- @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,30
+
   
   body {
     margin: 0;
     padding: 0;
-    font-family: "Figtree", sans-serif;
+    font-family: Inter;
     transition: all 0.3s ease;
   }
 `;
