@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   color: #ffffff;
   padding: 4rem 2rem 1rem 2rem;
   font-family: Inter;
+
 `
 
 const FooterContent = styled.div`

@@ -40,7 +40,7 @@ const ImageCard = styled.a`
   }
 `;
 
-const Section3 = () => {
+const Section2 = () => {
   return (
     <ImageSectionWrapper>
       <ImageCard href="#">
@@ -61,4 +61,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default Section2;

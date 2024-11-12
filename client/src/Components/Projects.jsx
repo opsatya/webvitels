@@ -23,6 +23,7 @@ const Title = styled.h1`
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 400;
   margin: 0;
+  margin-left:30px;
 `
 
 const Grid = styled.div`
@@ -30,7 +31,6 @@ const Grid = styled.div`
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
 
-  /* Define brick pattern for larger screens */
   & > div:nth-child(1) {
     grid-column: span 3;
   }
@@ -55,8 +55,11 @@ const Grid = styled.div`
 const ProjectCard = styled.div`
   display: flex;
   flex-direction: column; 
-    &:hover {
+  transition: transform 0.3s ease; /* Smoother hover effect */
+
+  &:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
+    cursor: pointer; /* Pointer cursor on hover */
   }
 `
 
@@ -66,7 +69,7 @@ const ProjectImage = styled.img`
   object-fit: cover;
   aspect-ratio: 16 / 9;
   border-radius: 20px;
-  transition: border-radius 0.3s ease;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
 `
 
 const ProjectTitle = styled.a`
@@ -98,13 +101,14 @@ const ScrollIndicator = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   overflow: hidden;
+  border-radius: 20px; /* Consistent border radius for all images */
 `
 
 const Projects = () => {
   const projects = [
-    { title: "Project 1",   image: "./images/Project-image/img1.avif", background: "#FF5F1F", link: "#orangin" },
-    { title: "Project 2",   image: "./images/Project-image/img2.avif", background: "#000000", scroll: true, link: "#atlas-v" },
-    { title: "Project 3",    image: "./images/Project-image/img3.avif", link: "#sunset" },
+    { title: "Project 1", image: "./images/Project-image/img1.avif", background: "#FF5F1F", link: "#orangin" },
+    { title: "Project 2", image: "./images/Project-image/img2.avif", background: "#000000", scroll: true, link: "#atlas-v" },
+    { title: "Project 3", image: "./images/Project-image/img3.avif", link: "#sunset" },
     { title: "Project 4", image: "./images/Project-image/img4.avif", link: "#project4" },
     { title: "Project 5", image: "./images/Project-image/img5.avif", link: "#project5" }
   ]

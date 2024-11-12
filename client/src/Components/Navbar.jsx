@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Moon, Sun, Menu, X } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
-
-  
   body {
     margin: 0;
     padding: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     transition: all 0.3s ease;
   }
 `;
@@ -70,13 +69,12 @@ const NavLinks = styled.div`
     background-color: ${props => props.theme.background};
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    align-items: center; 
-    text-align: center;  
-    transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(100%)')};
+    align-items: center;
+    text-align: center;
   }
 `;
 
-const NavLink = styled.a`
+const StyledLink = styled(NavLink)`
   color: ${props => props.theme.text};
   text-decoration: none;
   font-weight: 600;
@@ -91,7 +89,7 @@ const NavLink = styled.a`
     bottom: -5px;
     left: 0;
     background-color: ${props => props.theme.primary};
-    transition: width 0.5s ease;
+    transition: width 0.3s ease;
   }
 
   &:hover:after {
@@ -117,28 +115,29 @@ const ToggleButton = styled.button`
   }
 `;
 
-const TryFreeButton = styled.button`
-  background: linear-gradient(135deg, #6C63FF, #8C7FFF); // Gradient background
-  color: #ffffff;
-  border: none;
+const CustomButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e0e0e0;
+  color: ${props => props.theme.text};
   padding: 0.6rem 1.5rem;
-  border-radius: 25px; // Rounder corners for a pill shape
+  border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(108, 99, 255, 0.4); // Soft shadow for depth
+  box-shadow: 0 4px 8px rgba(108, 99, 255, 0.4);
 
   &:hover {
-    transform: translateY(-3px); // Lift effect on hover
-    box-shadow: 0 6px 12px rgba(108, 99, 255, 0.6); // Enhanced shadow on hover
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
   }
 
   &:active {
-    transform: translateY(1px); // Subtle press effect
-    box-shadow: 0 2px 4px rgba(108, 99, 255, 0.3); // Softer shadow when pressed
+    background: #333;
   }
 `;
-
 
 const MenuButton = styled.button`
   display: none;
@@ -179,16 +178,20 @@ const Navbar = () => {
           {isMenuOpen ? <X /> : <Menu />}
         </MenuButton>
         <NavLinks isOpen={isMenuOpen}>
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#service">Service</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
+          <StyledLink to="/" onClick={() => setIsMenuOpen(false)}>Home</StyledLink>
+          <StyledLink to="/about" onClick={() => setIsMenuOpen(false)}>About</StyledLink>
+          <StyledLink to="/service" onClick={() => setIsMenuOpen(false)}>Service</StyledLink>
+          <StyledLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</StyledLink>
         </NavLinks>
         <ButtonGroup>
           <ToggleButton onClick={toggleTheme}>
             {isDarkMode ? <Sun /> : <Moon />}
           </ToggleButton>
-          <TryFreeButton>Try free</TryFreeButton>
+          <CustomButton>
+            <a href="mailto:webvitels@gmail.com">
+            <span>Work With Us</span>
+            </a>
+          </CustomButton>
         </ButtonGroup>
       </NavbarContainer>
     </ThemeProvider>
