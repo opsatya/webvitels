@@ -7,9 +7,13 @@ import Footer from './Components/Footer'
 import Projects from './Components/Projects'
 import AboutUs from './Components/AboutUs'
 import Error from './Components/Error'
-import VisionSection from './Components/VisionSection'
 import Service from './Components/Service.jsx'
+import ServicePages from './pages/ServicePages'
 import Contact from './Components/Contact'
+import TeamSection from './Components/TeamSection.jsx'
+import TeamMemberPage from './pages/TeamMemberPage'
+
+import What_We_Do from './Components/What_We_Do.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -28,7 +32,7 @@ function App() {
               <>
                 <Hero />
                 <Projects />
-                <VisionSection />
+                <What_We_Do />
                 <Testimonials />
               </>
             } 
@@ -37,6 +41,9 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<TeamSection />} />
+          <Route path="/team/:id" element={<TeamMemberPage />} />
+          <Route path="/services/:id" element={<ServicePages />} />
           <Route path="*" element={<Error />} />
         </Routes>
 

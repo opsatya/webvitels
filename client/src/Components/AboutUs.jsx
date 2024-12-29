@@ -1,9 +1,13 @@
 import React from 'react'
-
+import MissionSection from './MissionSection'
+import VisionSection from './VisionSection'
+import TeamSection from './TeamSection'
 const AboutUs = () => {
   return (
     <div>
-      <h2>about us</h2>
+      <VisionSection />
+      <MissionSection />
+      <TeamSection />
     </div>
   )
 }
