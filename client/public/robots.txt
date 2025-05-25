@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow specific directories that shouldn't be indexed
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://thewebvitels.com/sitemap.xml
