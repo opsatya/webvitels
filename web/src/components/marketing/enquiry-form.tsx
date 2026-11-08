@@ -62,7 +62,7 @@ export function EnquiryForm({ className }: { className?: string }) {
       const res = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...input, website: String(fd.get("website") ?? "") }),
+        body: JSON.stringify({ ...input, _gotcha: String(fd.get("_gotcha") ?? "") }),
       });
       const data = (await res.json().catch(() => null)) as { ok?: boolean; errors?: EnquiryErrors } | null;
       if (res.status === 422 && data?.errors) {
@@ -162,8 +162,8 @@ export function EnquiryForm({ className }: { className?: string }) {
       {/* Honeypot for bots; hidden from people and assistive tech. */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label>
-          Website
-          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          Leave this empty
+          <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 

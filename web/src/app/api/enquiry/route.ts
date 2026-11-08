@@ -25,7 +25,8 @@ export async function POST(request: Request) {
   }
 
   // Honeypot: real users never see or fill this field.
-  if (typeof body.website === "string" && body.website.trim()) {
+  if (typeof body._gotcha === "string" && body._gotcha.trim()) {
+    console.warn("[enquiry] honeypot filled; dropped as spam");
     return NextResponse.json({ ok: true });
   }
 
