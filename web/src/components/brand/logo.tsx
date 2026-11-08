@@ -39,3 +39,28 @@ export function Logo({ className }: { className?: string }) {
     </span>
   );
 }
+
+/**
+ * Boxed wordmark: "WEB" knocked out of a solid block, "VITELS" in heavy type,
+ * both inside a thin outer frame. Colours follow currentColor so it works on
+ * light and dark sections.
+ */
+export function LogoWordmark({ className }: { className?: string }) {
+  return (
+    <span
+      role="img"
+      aria-label="WebVitels"
+      className={cn(
+        "inline-flex items-stretch gap-[0.35em] border-[0.09em] border-current p-[0.15em] font-display leading-none",
+        className,
+      )}
+    >
+      <span className="flex items-center bg-current px-[0.55em] py-[0.3em]">
+        <span className="font-light tracking-[0.12em] text-white [.dark_&]:text-ink">
+          WEB
+        </span>
+      </span>
+      <span className="flex items-center pr-[0.35em] font-extrabold tracking-[0.02em]">VITELS</span>
+    </span>
+  );
+}

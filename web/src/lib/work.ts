@@ -46,10 +46,9 @@ export const work: Work[] = [
     stack: ["Expo", "React Native", "Express", "MongoDB", "Socket.IO", "Redis"],
     href: "https://github.com/opsatya/localKart",
     image: {
-      src: "/images/work/localkart.png",
-      alt: "LocalKart customer and shopkeeper apps shown on two phones",
-      position: "100% 60%",
-      tightCrop: true,
+      src: "/images/work/localkart-hero.png",
+      alt: "Illustrated neighbourhood of local shops connected by LocalKart: a customer sends a request and a shopkeeper replies with an offer",
+      position: "50% 50%",
     },
   },
   {
