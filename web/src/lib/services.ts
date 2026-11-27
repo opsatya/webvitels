@@ -33,11 +33,11 @@ export const serviceGroups: ServiceGroup[] = [
   },
   {
     id: "grow",
-    title: "Get found and keep it fast",
-    intro: "Speed and search work together. We measure both.",
+    title: "Optimize and grow",
+    intro: "Search visibility, fast loading, and conversion optimization.",
     items: [
-      { name: "SEO", detail: "Technical SEO, structured data, local search and content structure." },
-      { name: "Performance audits", detail: "Core Web Vitals measured, explained and fixed." },
+      { name: "SEO & Discovery", detail: "Technical SEO, structured data, local search and search rankings." },
+      { name: "Performance Optimization", detail: "Speed optimization, code audits, and technical fixes to increase conversions." },
     ],
   },
   {

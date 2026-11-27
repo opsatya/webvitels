@@ -88,7 +88,7 @@ export function SiteFooter() {
 
       <div className="container-x flex flex-col gap-2 border-t border-border py-6 text-sm text-muted-foreground sm:flex-row sm:justify-between">
         <p>© {new Date().getFullYear()} WebVitels. All rights reserved.</p>
-        <p>Built with Next.js and checked against Core Web Vitals.</p>
+        <p>Built with Next.js for speed, stability, and scale.</p>
       </div>
     </footer>
   );

@@ -26,15 +26,13 @@ export function ContactDetails() {
           </span>
         </a>
       ))}
-      <div className="flex items-start gap-4 border-y py-4">
-        <MapPin className="mt-1 size-4 shrink-0 text-muted-foreground" />
+      <div className="flex items-center gap-4 border-y py-4">
+        <MapPin className="size-4 shrink-0 text-muted-foreground" />
         <span className="flex min-w-0 flex-col sm:flex-row sm:items-baseline sm:gap-4">
-        <span className="text-sm text-muted-foreground sm:w-24 sm:shrink-0">Studio</span>
-        <address className="font-medium not-italic">
-          {site.address.lines.join(", ")}
-          <br />
-          {site.address.city}, {site.address.region} {site.address.postalCode}
-        </address>
+          <span className="text-sm text-muted-foreground sm:w-24 sm:shrink-0">Studio</span>
+          <address className="font-medium not-italic">
+            Pune, Maharashtra, India
+          </address>
         </span>
       </div>
     </div>

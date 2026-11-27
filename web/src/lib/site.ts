@@ -7,12 +7,12 @@ export const site = {
   name: "WebVitels",
   url: "https://webvitels.com",
   description:
-    "WebVitels is a product studio in Pune. We design and build websites, mobile apps and SaaS platforms, and check every release against Core Web Vitals.",
+    "WebVitels is a digital product studio in Pune. We design, build, and scale high-performance websites, mobile apps, and SaaS platforms for modern businesses.",
   email: "webvitels@gmail.com",
   phone: { display: "+91 77090 03064", e164: "+917709003064", wa: "917709003064" },
   address: {
-    lines: ["98/4 Sun City, Charholi"],
-    city: "Pimpri Chinchwad",
+    lines: ["Hinjewadi"],
+    city: "pune",
     region: "Maharashtra",
     postalCode: "412105",
     country: "IN",

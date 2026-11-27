@@ -15,8 +15,8 @@ const steps = [
     body: "Small, reviewed changes on a staging link you can open any day. No disappearing for six weeks.",
   },
   {
-    title: "Measure",
-    body: "We check LCP, INP and CLS against Google's thresholds, plus accessibility and SEO basics, before launch.",
+    title: "Test & Polish",
+    body: "Rigorous testing across screen sizes, performance tuning, and security checks before launch.",
   },
   {
     title: "Run",
@@ -46,11 +46,11 @@ export function Process() {
               <h3 className="text-title">{s.title}</h3>
               <p className="text-[0.9375rem] text-muted-foreground">{s.body}</p>
               {i === 3 && (
-                <ul aria-label="Thresholds we test against" className="mt-auto flex flex-col gap-1.5 pt-2 text-sm">
+                <ul aria-label="Quality standards we verify" className="mt-auto flex flex-col gap-1.5 pt-2 text-sm">
                   {[
-                    ["LCP", "under 2.5 s"],
-                    ["INP", "under 200 ms"],
-                    ["CLS", "under 0.1"],
+                    ["Speed", "fast & responsive"],
+                    ["Cross-device", "thoroughly tested"],
+                    ["Launch check", "production ready"],
                   ].map(([k, v]) => (
                     <li key={k} className="flex items-center gap-2">
                       <span aria-hidden className="size-2 rounded-full bg-pass" />

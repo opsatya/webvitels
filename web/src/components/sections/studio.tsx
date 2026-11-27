@@ -30,15 +30,15 @@ export function Studio() {
         </div>
 
         <figure className="flex flex-col gap-5 lg:col-span-5 lg:col-start-8 lg:self-end">
-          <div className="grid aspect-square w-full max-w-60 place-items-center rounded-full border bg-paper">
-            <LogoWordmark className="text-lg" />
+          <div className="grid aspect-square w-full max-w-80 place-items-center rounded-full border bg-paper">
+            <LogoWordmark className="text-2xl" />
           </div>
           <figcaption>
             <p className="text-title">{site.name}</p>
             <p className="text-muted-foreground">Product studio, Pune</p>
             <p className="mt-3 max-w-md text-[0.9375rem] text-muted-foreground">
-              Websites, mobile apps and SaaS platforms, designed and built by the same small team and checked
-              against Core Web Vitals on every release.
+              Websites, mobile apps and SaaS platforms, designed and built by the same agile team
+              committed to clean code, seamless user experience, and lasting business value.
             </p>
           </figcaption>
         </figure>

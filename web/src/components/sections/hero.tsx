@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Reveal } from "@/components/marketing/reveal";
-import { VitalsMonitor } from "@/components/marketing/vitals-monitor";
+import { StudioCard } from "@/components/marketing/studio-card";
 import { Button } from "@/components/ui/button";
 import { primaryCta } from "@/lib/site";
 
@@ -13,18 +13,18 @@ export function Hero() {
       <div aria-hidden className="bg-grid absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
 
       <div className="container-x grid gap-12 pt-28 pb-16 md:pt-36 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pt-40 lg:pb-24">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-6">
           {/* No entrance animation on the headline: it is the LCP element. */}
           <p className="text-kicker text-muted-foreground">Product studio in Pune, India</p>
 
           <h1 id="hero-title" className="text-display mt-6">
-            Software built to pass the vitals.
+            Software built to grow your business.
           </h1>
 
           <p className="text-lead mt-7 max-w-xl text-muted-foreground">
-              We design and build websites, mobile apps and SaaS platforms. Before anything ships,
-              we check it against the numbers Google uses to judge speed and stability. The panel
-              here is doing that to this page, live.
+            We design and build high-quality websites, mobile apps, and SaaS platforms.
+            From concept to production, we partner with companies to engineer fast,
+            reliable software that delights users and drives measurable business growth.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -37,8 +37,8 @@ export function Hero() {
           </div>
         </div>
 
-        <Reveal delay={0.15} y={16} className="lg:col-span-5">
-          <VitalsMonitor />
+        <Reveal delay={0.15} y={16} className="lg:col-span-6">
+          <StudioCard />
         </Reveal>
       </div>
 

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     siteName: site.name,
     url: "/",
-    title: "WebVitels: built to pass the vitals",
+    title: "WebVitels: websites, mobile apps and SaaS platforms",
     description: site.description,
     images: [{ url: "/images/work/xumo-home.png", width: 1600, height: 1000 }],
   },
